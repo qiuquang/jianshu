@@ -43,6 +43,22 @@ export const NavItem = styled.div`
   }
 `
 
+export const SearchWapper = styled.div`
+  float: left;
+  position: relative;
+  .iconfont{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: red;
+    text-align:center;
+  }  
+`
+
 export const NavSearch = styled.input.attrs(
   {
     placeholder: '搜索'
@@ -50,7 +66,7 @@ export const NavSearch = styled.input.attrs(
 )`
   width: 160px;
   height: 38px;
-  padding: 0 20px;
+  padding: 0 35px 0 20px;
   margin-top: 9px;
   border: none;
   outline: none;
@@ -58,6 +74,7 @@ export const NavSearch = styled.input.attrs(
   border-radius: 19px;
   background: #eee;
   font-size: 14px;
+  color: #666;
    &::placeholder{
     color: #999;
    }
