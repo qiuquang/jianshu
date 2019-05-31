@@ -48,7 +48,8 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    focused: state.header.get('focused'), // immutable  get方法
+    // focused: state.get('header').get('focused'), // immutable  get方法
+    focused: state.getIn(['header', 'focused']), // 等价上面方法
   }
 }
 const mapDispathToProps = (dispatch) => {
