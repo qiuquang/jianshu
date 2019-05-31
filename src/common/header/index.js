@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'; // 建立连接
-import { CSSTransition } from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group';
+import { actionCreator } from './store'
 import {
   HeaderWapper,
   Logo,
@@ -93,13 +94,13 @@ const mapDispathToProps = (dispatch) => {
       const action = {
         type: 'search_focus',
       };
-      dispatch(action)
+      dispatch(actionCreator.searchFoucs())
     },
     handleInputBlur() {
       const action = {
         type: 'search_blur',
       };
-      dispatch(action)
+      dispatch(actionCreator.searchBlur())
     }
   }
 }
