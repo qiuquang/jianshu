@@ -32,7 +32,6 @@ class Home extends Component{
 
 const mapDispatch = (dispatch) => ({ // 这是容器组件
   changetHomeData() {
-    console.log(actionCreators.getHomeInfo());
     const action = actionCreators.getHomeInfo();
     dispatch(action);
   }

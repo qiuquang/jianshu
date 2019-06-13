@@ -16,6 +16,10 @@ export default (state = defaultState, action) => { // 返回纯函数
         recommendList: fromJS(action.recommendList)
       })
       // state.set('topicList', fromJS(action.topicList)).set() //.. 可以连续set
+    case constants.ADD_ARTICLE_LIST:
+      // console.log(action);
+      console.log(state.get('articleList'));
+      return state.set('articleList', state.get('articleList').concat(action.list));
     default:
       return state;
   }

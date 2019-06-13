@@ -92,8 +92,8 @@ export const WriterWrapper  = styled.div`
    width: 278px;
    height: 300px;
    line-height: 300px;
-   text-aglin: center;
-   border-radius: 3px
+   text-align: center;
+   border-radius: 3px;
    border: 1px solid #dcdcdc;
 `;
 
@@ -102,4 +102,16 @@ export const RecommendItem  = styled.div`
    height: 50px;
    background: url(${(props) => props.imgUrl});
    background-size: contain;
+`;
+
+export const LoadMore  = styled.div`
+   width: 100%;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   margin: 20px 0;
+   border-radius: 20px;
+   color: #fff;
+   background: #a5a5a5;
+   cursor: pointer;
 `;
