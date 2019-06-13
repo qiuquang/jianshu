@@ -16,7 +16,7 @@ export const HomeLeft = styled.div`
   }
 `
 export const HomeRight = styled.div`
-  width: 240px;
+  width: 280px;
   float: right;
 `
 export const TopicWrapper = styled.div`
@@ -83,3 +83,23 @@ export const ListInfo  = styled.div`
     color: #999;
    }
 `
+
+export const RecommendWrapper  = styled.div`
+   width: 280px;
+   margin: 30px 0;
+`
+export const WriterWrapper  = styled.div`
+   width: 278px;
+   height: 300px;
+   line-height: 300px;
+   text-aglin: center;
+   border-radius: 3px
+   border: 1px solid #dcdcdc;
+`;
+
+export const RecommendItem  = styled.div`
+   width: 280px;
+   height: 50px;
+   background: url(${(props) => props.imgUrl});
+   background-size: contain;
+`;
