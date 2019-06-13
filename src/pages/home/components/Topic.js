@@ -13,7 +13,7 @@ class Topic extends Component{
               <TopicItem key={item.get('id')}>
                 <img className="topic-pic"
                      src={item.get('imgUrl')} alt="download"/>
-                下载
+                {item.get('title')}
               </TopicItem>
             )
           })

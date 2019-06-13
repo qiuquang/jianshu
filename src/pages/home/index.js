@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Topic from './components/Topic';
+import { connect } from 'react-redux';
 import List from './components/List';
 import Recommend from './components/Recommend';
 import Writer from './components/Writer';
 import { HomeWrapper, HomeLeft, HomeRight } from './style'
+import { actionCreators } from './store';
 
-export default class Home extends Component{
+class Home extends Component{
   render() {
     return (
       <HomeWrapper>
@@ -22,4 +24,18 @@ export default class Home extends Component{
       </HomeWrapper>
     )
   }
+
+  componentDidMount(){ // 这是ui组件
+    this.props.changetHomeData();
+  }
 }
+
+const mapDispatch = (dispatch) => ({ // 这是容器组件
+  changetHomeData() {
+    console.log(actionCreators.getHomeInfo());
+    const action = actionCreators.getHomeInfo();
+    dispatch(action);
+  }
+})
+
+export default connect(null, mapDispatch)(Home)
